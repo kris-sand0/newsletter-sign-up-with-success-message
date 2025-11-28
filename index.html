@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+    <link rel="preload" href="./assets/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  </head>
+  <body>
+    <main class="page">
+      <div class="card">
+        <div class="illustration" aria-hidden="true"></div>
+
+        <div class="content">
+          <h1 class="title">Stay updated!</h1>
+          <p class="lead">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="benefits">
+            <li><img src="assets/images/icon-list.svg" alt=""> Product discovery and building what matters</li>
+            <li><img src="assets/images/icon-list.svg" alt=""> Measuring to ensure updates are a success</li>
+            <li><img src="assets/images/icon-list.svg" alt=""> And much more!</li>
+          </ul>
+
+          <form id="signup-form" novalidate class="signup-form" aria-describedby="error-msg">
+            <div class="form-group">
+              <label for="email-input" class="form-label">Email address</label>
+              <p id="error-msg" class="error" aria-live="polite"></p>
+            </div>
+            <input id="email-input" type="email" name="email" placeholder="email@company.com" required autocomplete="email">
+            <button type="submit" class="btn">Subscribe to monthly newsletter</button>
+          </form>
+
+          <div id="success-panel" class="success" role="status" aria-live="polite" hidden>
+            <img src="assets/images/icon-success.svg" alt="success" class="success-icon">
+            <h2>Thanks for subscribing!</h2>
+            <p>A confirmation email has been sent to <span id="success-email"></span>. Please open it and click the button inside to confirm your subscription.</p>
+            <button id="dismiss-success" class="btn btn--ghost">Dismiss message</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="java.js" defer></script>
+  </body>
+</html>
